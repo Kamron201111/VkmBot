@@ -6,6 +6,8 @@ from utils.youtube import search_youtube, download_audio
 from utils.spotify import search_spotify
 from utils.google_search import google_music_search
 
+logging.basicConfig(level=logging.INFO)
+
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
@@ -30,6 +32,5 @@ async def search(msg: types.Message):
     audio_path = download_audio(yt['url'])
     await msg.answer_audio(open(audio_path,'rb'))
 
-if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO)
+if __name__ == "__main__":
     executor.start_polling(dp)
