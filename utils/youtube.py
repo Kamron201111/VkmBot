@@ -1,5 +1,4 @@
-from youtubesearchpython import VideosSearch
-import yt_dlp
+from youtube_search_python import VideosSearch
 
 def search_youtube(query):
     v = VideosSearch(query, limit=1).result()['result'][0]
