@@ -1,0 +1,4 @@
+aiogram
+youtubesearchpython
+yt-dlp
+requests
